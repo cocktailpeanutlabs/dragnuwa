@@ -13,7 +13,10 @@ module.exports = async (kernel) => {
     "run": [{
       "method": "shell.run",
       "params": {
-        "message": "git clone https://huggingface.co/spaces/cocktailpeanut/DragNUWA app",
+        "message": [
+          "git lfs install",
+          "git clone https://huggingface.co/spaces/cocktailpeanut/DragNUWA app",
+        ]
       }
     }, {
       "method": "shell.run",
