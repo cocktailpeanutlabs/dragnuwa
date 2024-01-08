@@ -24,7 +24,8 @@ module.exports = async (kernel) => {
         "path": "app",
         "venv": "env",
         "env": {
-          "DS_BUILD_AIO": "0"
+          "DS_BUILD_AIO": "0",
+          "DS_BUILD_EVOFORMER_ATTN": "0"
         },
         "message": [
           "{{(gpu === 'nvidia' ? self.cmds.nvidia : (gpu === 'amd' ? self.cmds.amd : self.cmds.default))}}",
