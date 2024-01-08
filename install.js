@@ -23,6 +23,9 @@ module.exports = async (kernel) => {
       "params": {
         "path": "app",
         "venv": "env",
+        "env": {
+          "DS_BUILD_AIO": "0"
+        },
         "message": [
           "{{(gpu === 'nvidia' ? self.cmds.nvidia : (gpu === 'amd' ? self.cmds.amd : self.cmds.default))}}",
           "pip install -r requirements.txt"
